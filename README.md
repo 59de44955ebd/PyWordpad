@@ -1,5 +1,5 @@
 # PyWordpad
-A clone of classic (pre Win 7) MS Wordpad written in pure Python, based on native Win32 controls and ctypes (Petzold style).
+A clone of classic (pre Win 7) MS Wordpad written in pure Python (no third-party modules), based on native Win32 controls and ctypes (Petzold style).
 
 ## Differences to original Wordpad
 

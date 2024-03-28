@@ -8,7 +8,7 @@ from winapp.const import WM_USER, WS_EX_COMPOSITED, WS_CHILD, WS_VISIBLE, WS_CLI
 from winapp.controls.common import *
 from winapp.window import *
 from winapp.dlls import user32 #, comctl32
-from winapp.imagelist import *
+#from winapp.imagelist import *
 from winapp.themes import *
 
 

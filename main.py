@@ -7,20 +7,20 @@ import subprocess
 import sys
 import time
 
-NATIVE_DOC_EXTENSIONS = ('.rtf', '.txt')
+DOC_EXTENSIONS = ('.rtf', '.txt')
 if shutil.which('pandoc.exe') is None:
     HAS_PANDOC = False
-    DOC_EXTENSIONS = NATIVE_DOC_EXTENSIONS
+    PANDOC_EXTENSIONS = []
 else:
     HAS_PANDOC = True
-    DOC_EXTENSIONS = ('.rtf', '.txt', '.docx', '.odt', '.md', '.htm', '.html', '.epub')
+    PANDOC_EXTENSIONS = ('.docx', '.odt', '.md', '.htm', '.html', '.epub')
 
 if shutil.which('magick.exe') is None:
     HAS_MAGICK = False
     IMAGE_EXTENSIONS = ('.bmp',)
 else:
     HAS_MAGICK = True
-    IMAGE_EXTENSIONS = ('.bmp', '.jpg', '.jpeg', '.png', '.gif', '.tif', '.tiff')
+    IMAGE_EXTENSIONS = ('.bmp', '.jpg', '.jpeg', '.png', '.gif', '.tif', '.tiff', '.webp')
 
 from winapp.mainwin import *
 from winapp.dialog import *
@@ -257,11 +257,9 @@ class App(MainWin):
                     ext = os.path.splitext(filename)[1].lower()
                     if ext in IMAGE_EXTENSIONS:
                         self.create_timer(lambda: self.action_insert_image(filename), 0, True)
-                    elif ext in DOC_EXTENSIONS:
+                    else:
                         self.create_timer(lambda: self.action_open(filename), 0, True)
                         break
-                    else:
-                        self.statusbar.set_text(_('Unsupported file format'))
                 return 1
 
             elif msg == RBN_HEIGHTCHANGE:
@@ -339,8 +337,8 @@ class App(MainWin):
 
         user32.SetFocus(self.rich_edit.hwnd)
 
-#        self._load_file(os.path.join(APP_DIR, 'test_files', 'test.rtf'))
-#        self._load_file(os.path.join(APP_DIR, 'test_files', 'README.md'))
+        if len(args) > 0:
+            self._load_file(args[0])
 
     ########################################
     #
@@ -1056,7 +1054,7 @@ class App(MainWin):
     ########################################
     def _load_file(self, filename):
         ext = os.path.splitext(filename)[1].lower()
-        if ext not in NATIVE_DOC_EXTENSIONS:
+        if ext in PANDOC_EXTENSIONS:
             tmp_rtf_file = os.path.join(os.environ['TMP'], '~tmp.rtf')
             if os.path.isfile(tmp_rtf_file):
                 os.unlink(tmp_rtf_file)
@@ -1121,7 +1119,7 @@ class App(MainWin):
     def _save_file(self, filename):
         ext = os.path.splitext(filename)[1].lower()
 
-        if ext == '.txt':
+        if ext == '.txt' or (ext not in DOC_EXTENSIONS and ext not in PANDOC_EXTENSIONS):
             res = self.show_message_box(
                     _('WARN_TXT').format(self._filename if self._filename else _('Document')),
                     APP_NAME, MB_ICONWARNING | MB_YESNO)
@@ -1149,7 +1147,7 @@ class App(MainWin):
         if self.is_dark:
             rtf = rtf.replace(b'red255\\green255\\blue255', b'red0\\green0\\blue0')
 
-        if ext not in NATIVE_DOC_EXTENSIONS:
+        if ext in PANDOC_EXTENSIONS:
             tmp_rtf_file = os.path.join(os.environ['TMP'], '~tmp.rtf')
             with open(tmp_rtf_file, 'wb') as f:
                 f.write(rtf)
@@ -1387,7 +1385,7 @@ class App(MainWin):
             return
         if filename is None:
             if HAS_PANDOC:
-                filename = self.get_open_filename(_('Open'), '.bmp',
+                filename = self.get_open_filename(_('Open'), '.rtf',
                         _('All Documents') + '\0*.rtf;*.txt;*.md;*.docx;*.odt;*.htm;*.html;*.epub\0' +
                         'RTF (*.rtf)\0*.rtf\0' +
                         'TXT (*.txt)\0*.txt\0' +
@@ -1396,11 +1394,17 @@ class App(MainWin):
                         'ODT (*.odt)\0*.odt\0' +
                         'HTML (*.htm;*html)\0*.htm;*.html\0' +
                         'EPUB (*.epub)\0*.epub\0' +
+                        _('All Files') + ' (*.*)\0*.*\0' +
                         '\0'
                         )
             else:
                 filename = self.get_open_filename(_('Open'), '.rtf',
-                        _('Rich Text Format') + ' (*.rtf)\0*.rtf\0' + _('Text Documents') + ' (*.txt)\0*.txt\0\0')
+                        _('All Documents') + '\0*.rtf;*.txt\0' +
+                        'RTF (*.rtf)\0*.rtf\0' +
+                        'TXT (*.txt)\0*.txt\0' +
+                        _('All Files') + ' (*.*)\0*.*\0' +
+                        '\0'
+                        )
         if filename:
             self._load_file(filename)
 
@@ -1429,12 +1433,16 @@ class App(MainWin):
                     'ODT (*.odt)\0*.odt\0' +
                     'HTML (*.htm;*html)\0*.htm;*.html\0' +
                     'EPUB (*.epub)\0*.epub\0' +
+                    _('All Files') + ' (*.*)\0*.*\0' +
                     '\0',
                     self._filename if self._filename else ''
                     )
         else:
             filename = self.get_save_filename(_('Save As'), '.rtf',
-                    _('Rich Text Format') + ' (*.rtf)\0*.rtf\0' + _('Text Documents') + ' (*.txt)\0*.txt\0\0',
+                    'RTF (*.rtf)\0*.rtf\0' +
+                    'TXT (*.txt)\0*.txt\0' +
+                    _('All Files') + ' (*.*)\0*.*\0' +
+                    '\0',
                     self._filename if self._filename else '')
 
         if not filename or not self._save_file(filename):
@@ -1616,9 +1624,8 @@ class App(MainWin):
         user32.CheckMenuItem(self.hmenu, IDM_DARK_MODE, MF_BYCOMMAND | (MF_CHECKED if self.is_dark else MF_UNCHECKED))
         self.apply_theme(self.is_dark)
         user32.SetWindowPos(self.hwnd, 0, 0,0, 0,0, SWP_NOMOVE | SWP_NOSIZE | SWP_NOZORDER | SWP_FRAMECHANGED)
-        if not was_dirty:
-            self._is_dirty = False
-            self.set_window_text(self._get_caption())
+        self._is_dirty = was_dirty
+        self.set_window_text(self._get_caption())
 
     ########################################
     #
@@ -1888,12 +1895,13 @@ class App(MainWin):
         if img_file is None:
             if HAS_MAGICK:
                 img_file = self.get_open_filename(_('Open'), '.bmp',
-                    _('All Images') +'\0*.bmp;*.jpg;*.jpeg;*.png;*.gif;*.tif;*.tiff\0' +
+                    _('All Images') +'\0*.bmp;*.jpg;*.jpeg;*.png;*.gif;*.tif;*.tiff;*.webp\0' +
                     'BMP (*.bmp)\0*.bmp\0' +
                     'JPEG (*.jpg;*jpeg)\0*.jpg;*.jpeg\0' +
                     'PNG (*.png)\0*.png\0' +
                     'GIF (*.gif)\0*.gif\0' +
                     'TIFF (*.tif;*tiff)\0*.tif;*.tiff\0' +
+                    'WEBP (*.webp)\0*.webp\0' +
                     '\0'
                     )
             else:

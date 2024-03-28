@@ -4,25 +4,19 @@
 	"FIND_FINISHED": "{} hat das Durchsuchen des Dokuments beendet.",
 	"SAVE_CHANGES": "Möchten Sie die Änderungen an {} speichern?",
 	"WARN_TXT": "Sie sind dabei, die Datei als Textdatei zu speichern. Dadurch geht die Formatierung verloren. Möchten Sie den Vorgang trotzdem fortsetzen?",
+	"CTRL": "Strg",
+	"SHIFT": "Umschalt",
+	"DEL": "Entf",
+	"ENTER": "Eingabe",
 
     "All Files": "Alle Dateien",
     "All Documents": "Alle Dokumente",
     "All Images": "Alle Bildateien",
     "Document": "Dokument",
-    "Text Documents": "Textdateien",
-    "Rich Text Documents": "RTF Dateien",
 
 	"Edit": "Bearbeiten",
 	"Insert": "Einfügen",
     "Save As": "Speichern unter",
-
-    "Found next from the bottom": "Nächster Treffer von unten",
-	"Found next from the top": "Nächster Treffer von oben",
-
-	"CTRL": "Strg",
-	"SHIFT": "Umschalt",
-	"DEL": "Entf",
-	"ENTER": "Eingabe",
 
 	"New": "Neu",
 	"Open": "Öffnen",

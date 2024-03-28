@@ -47,8 +47,6 @@ LANG = locale.windows_locale[kernel32.GetUserDefaultUILanguage()]
 if not os.path.isdir(os.path.join(APP_DIR, 'resources', LANG)):
     LANG = 'en_US'
 
-#LANG = 'en_US'
-
 with open(os.path.join(APP_DIR, 'resources', LANG, 'StringTable1.json'), 'rb') as f:
     __ = json.loads(f.read())
 

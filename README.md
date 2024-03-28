@@ -16,7 +16,7 @@ A clone of classic (pre Win 7) MS Wordpad written in pure Python, based on nativ
 ## Screenshots
 
 *PyWordpad in Windows 11*  
-<img src="screenshots/pywordpad.png" style="width:830px;height:647px" alt="PyWordpad in Windows 11" />
+![PyWordpad in Windows 11](screenshots/pywordpad.png)
 
 *PyWordpad in Windows 11 (Dark Mode)*  
-<img src="screenshots/pywordpad-dark.png" style="width:830px;height:647px" alt="PyWordpad in Windows 11 (Dark Mode)" />
+![PyWordpad in Windows 11 (Dark Mode)](screenshots/pywordpad-dark.png)

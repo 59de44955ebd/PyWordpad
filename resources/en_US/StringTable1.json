@@ -3,5 +3,5 @@
 	"ABOUT_TEXT": "{} v0.{}\n(c) {}\n\nA clone of Wordpad written in pure Python,\nbased on native Win32 controls and ctypes.",
 	"FIND_FINISHED": "{} has finished searching the document.",
 	"SAVE_CHANGES": "Do you want to save changes to {}?",
-	"WARN_TXT": "You are about to save the document in a Text-Only format, which will remove all formatting. Are you sure you want to do this?",
+	"WARN_TXT": "You are about to save the document in a Text-Only format, which will remove all formatting. Are you sure you want to do this?"
 }

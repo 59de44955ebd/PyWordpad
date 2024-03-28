@@ -9,7 +9,6 @@
             "caption": "&Datei",
             "items": [
                 {
-                    "type": "item",
                     "caption": "&Neu...\tCtrl+N",
                     "id": 57600
                 },

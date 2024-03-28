@@ -39,10 +39,9 @@
                     "caption": "-"
                 },
                 {
-                    "type": "menu",
                     "caption": "Recent Files",
                     "id": 57616,
-                    "flags": "GRAYED"
+                    "items": []
                 },
                 {
                     "caption": "-"

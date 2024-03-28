@@ -16,7 +16,7 @@
     ],
     "controls": [
         {
-            "caption": "&Tab stop position",
+            "caption": "Tab stop position",
             "id": -1,
             "class": "BUTTON",
             "style": 1342177287,

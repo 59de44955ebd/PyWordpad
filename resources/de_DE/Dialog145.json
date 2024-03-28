@@ -1,0 +1,103 @@
+{
+    "id": 145,
+    "class": "DIALOGEX",
+    "rect": [
+        0,
+        0,
+        186,
+        119
+    ],
+    "style": -1865940800,
+    "exstyle": 0,
+    "caption": "Tabstopps",
+    "font": [
+        "MS Shell Dlg",
+        8
+    ],
+    "controls": [
+        {
+            "caption": "Tabstoppposition",
+            "id": 1022,
+            "class": "BUTTON",
+            "style": 1342177287,
+            "rect": [
+                7,
+                7,
+                114,
+                103
+            ]
+        },
+        {
+            "caption": "Tabstoppposition",
+            "id": 1019,
+            "class": "COMBOBOX",
+            "style": 1344339969,
+            "rect": [
+                13,
+                18,
+                101,
+                68
+            ]
+        },
+        {
+            "caption": "&Festlegen",
+            "id": 1005,
+            "class": "BUTTON",
+            "style": 1342242816,
+            "rect": [
+                13,
+                87,
+                48,
+                14
+            ]
+        },
+        {
+            "caption": "L&\u00f6schen",
+            "id": 1006,
+            "class": "BUTTON",
+            "style": 1342242816,
+            "rect": [
+                66,
+                87,
+                48,
+                14
+            ]
+        },
+        {
+            "caption": "OK",
+            "id": 1,
+            "class": "BUTTON",
+            "style": 1342242817,
+            "rect": [
+                128,
+                10,
+                50,
+                14
+            ]
+        },
+        {
+            "caption": "Abbrechen",
+            "id": 2,
+            "class": "BUTTON",
+            "style": 1342242816,
+            "rect": [
+                128,
+                27,
+                50,
+                14
+            ]
+        },
+        {
+            "caption": "A&lle l\u00f6schen",
+            "id": 1007,
+            "class": "BUTTON",
+            "style": 1342242816,
+            "rect": [
+                128,
+                44,
+                50,
+                14
+            ]
+        }
+    ]
+}

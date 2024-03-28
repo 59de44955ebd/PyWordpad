@@ -1,0 +1,103 @@
+{
+    "id": 145,
+    "class": "DIALOGEX",
+    "rect": [
+        0,
+        0,
+        186,
+        119
+    ],
+    "style": -1865940800,
+    "exstyle": 0,
+    "caption": "Tabs",
+    "font": [
+        "MS Shell Dlg",
+        8
+    ],
+    "controls": [
+        {
+            "caption": "&Tab stop position",
+            "id": -1,
+            "class": "BUTTON",
+            "style": 1342177287,
+            "rect": [
+                7,
+                7,
+                114,
+                103
+            ]
+        },
+        {
+            "caption": "Tab stop position",
+            "id": 1019,
+            "class": "COMBOBOX",
+            "style": 1344339969,
+            "rect": [
+                13,
+                18,
+                101,
+                68
+            ]
+        },
+        {
+            "caption": "&Set",
+            "id": 1005,
+            "class": "BUTTON",
+            "style": 1342242816,
+            "rect": [
+                13,
+                87,
+                48,
+                14
+            ]
+        },
+        {
+            "caption": "Cl&ear",
+            "id": 1006,
+            "class": "BUTTON",
+            "style": 1342242816,
+            "rect": [
+                66,
+                87,
+                48,
+                14
+            ]
+        },
+        {
+            "caption": "OK",
+            "id": 1,
+            "class": "BUTTON",
+            "style": 1342242817,
+            "rect": [
+                128,
+                10,
+                50,
+                14
+            ]
+        },
+        {
+            "caption": "Cancel",
+            "id": 2,
+            "class": "BUTTON",
+            "style": 1342242816,
+            "rect": [
+                128,
+                27,
+                50,
+                14
+            ]
+        },
+        {
+            "caption": "Clear A&ll",
+            "id": 1007,
+            "class": "BUTTON",
+            "style": 1342242816,
+            "rect": [
+                128,
+                44,
+                50,
+                14
+            ]
+        }
+    ]
+}

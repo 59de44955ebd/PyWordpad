@@ -1,0 +1,270 @@
+{
+    "id": 128,
+    "language": [
+        "LANG_GERMAN",
+        "SUBLANG_GERMAN"
+    ],
+    "items": [
+        {
+            "caption": "&Datei",
+            "items": [
+                {
+                    "type": "item",
+                    "caption": "&Neu...\tCtrl+N",
+                    "id": 57600
+                },
+                {
+                    "caption": "Ö&ffnen...\tCtrl+O",
+                    "id": 57601
+                },
+                {
+                    "caption": "&Speichern\tCtrl+S",
+                    "id": 57603
+                },
+                {
+                    "caption": "Speichern &unter...",
+                    "id": 57604
+                },
+                {
+                    "caption": "-"
+                },
+                {
+                    "caption": "&Drucken...\tCtrl+P",
+                    "id": 57607
+                },
+                {
+                    "caption": "Seite ein&richten...",
+                    "id": 32771
+                },
+                {
+                    "caption": "-"
+                },
+                {
+                    "caption": "Zuletzt verwendete Dateien",
+                    "id": 57616,
+                    "items": []
+                },
+                {
+                    "caption": "-"
+                },
+                {
+                    "caption": "&Beenden",
+                    "id": 57665
+                }
+            ]
+        },
+        {
+            "caption": "&Bearbeiten",
+            "items": [
+                {
+                    "caption": "&Rückgängig\tCtrl+Z",
+                    "id": 57643
+                },
+                {
+                    "caption": "Wieder&holen\tCtrl+Y",
+                    "id": 57644
+                },
+                {
+                    "caption": "-"
+                },
+                {
+                    "caption": "&Ausschneiden\tCtrl+X",
+                    "id": 57635,
+                    "flags": "GRAYED"
+                },
+                {
+                    "caption": "&Kopieren\tCtrl+C",
+                    "id": 57634,
+                    "flags": "GRAYED"
+                },
+                {
+                    "caption": "&Einfügen\tCtrl+V",
+                    "id": 57637
+                },
+                {
+                    "caption": "&Löschen\tDel",
+                    "id": 57632,
+                    "flags": "GRAYED"
+                },
+                {
+                    "caption": "Alles &markieren\tCtrl+A",
+                    "id": 57642
+                },
+                {
+                    "caption": "-"
+                },
+                {
+                    "caption": "&Suchen...\tCtrl+F",
+                    "id": 57636,
+                    "flags": "GRAYED"
+                },
+                {
+                    "caption": "&Weitersuchen\tF3",
+                    "id": 57640,
+                    "flags": "GRAYED"
+                },
+                {
+                    "caption": "Erset&zen...\tCtrl+H",
+                    "id": 57641,
+                    "flags": "GRAYED"
+                }
+            ]
+        },
+        {
+            "caption": "&Ansicht",
+            "items": [
+                {
+                    "caption": "&Zeilenumbruch",
+                    "id": 32
+                },
+                {
+                    "caption": "-"
+                },
+                {
+                    "caption": "&Zoom",
+                    "items": [
+                        {
+                            "caption": "&Vergrößern\tAlt+Plus",
+                            "id": 34
+                        },
+                        {
+                            "caption": "Ver&kleinern\tAlt+Minus",
+                            "id": 35
+                        },
+                        {
+                            "caption": "Standardansicht wiederherstellen\tAlt+0",
+                            "id": 36
+                        }
+                    ]
+                },
+                {
+                    "caption": "-"
+                },
+                {
+                    "caption": "&Symbolleiste",
+                    "id": 59392
+                },
+                {
+                    "caption": "&Formatierungsleiste",
+                    "id": 59396
+                },
+                {
+                    "caption": "Status&leiste",
+                    "id": 59393
+                },
+                {
+                    "caption": "-"
+                },
+                {
+                    "caption": "&Dunkler Modus",
+                    "id": 28
+                }
+            ]
+        },
+        {
+            "caption": "&Einfügen",
+            "items": [
+                {
+                    "caption": "&Datum und Uhrzeit...",
+                    "id": 32778
+                },
+                {
+                    "caption": "&Bild...",
+                    "id": 57856
+                }
+            ]
+        },
+        {
+            "caption": "Forma&t",
+            "items": [
+                {
+                    "caption": "Sch&riftart...",
+                    "id": 57696
+                },
+		        {
+		            "caption": "&Zeilenabstand",
+		            "id": 32779,
+				    "items": [
+				        {
+				            "caption": "1,0",
+				            "id": 59000
+				        },
+				        {
+				            "caption": "1,15",
+				            "id": 59001,
+                    		"flags": "CHECKED"
+				        },
+				        {
+				            "caption": "1,5",
+				            "id": 59002
+				        },
+				        {
+				            "caption": "2",
+				            "id": 59003
+				        }
+				    ]
+				},
+		        {
+		            "caption": "Auf&zählungszeichen",
+		            "id": 32777,
+				    "items": [
+				        {
+				            "caption": "Keine",
+				            "id": 58000,
+                    		"flags": "CHECKED"
+				        },
+				        {
+				            "caption": "Punkte",
+				            "id": 58001
+				        },
+				        {
+				            "caption": "Arabische Ziffern",
+				            "id": 58002
+				        },
+				        {
+				            "caption": "Buchstaben (Kleinschreibung)",
+				            "id": 58003
+				        },
+				        {
+				            "caption": "Buchstaben (Großschreibung)",
+				            "id": 58004
+				        },
+				        {
+				            "caption": "Römische Ziffern (Kleinschreibung)",
+				            "id": 58005
+				        },
+				        {
+				            "type": "item",
+				            "caption": "Römische Ziffern (Großschreibung)",
+				            "id": 58006
+				        }
+		    		]
+		        },
+                {
+                    "caption": "&Absatz...",
+                    "id": 32780
+                },
+                {
+                    "caption": "&Tabstopps...",
+                    "id": 32781
+                }
+            ]
+        },
+        {
+            "caption": "&?",
+            "items": [
+                {
+                    "caption": "Über &PyWordpad",
+                    "id": 57663
+                },
+                {
+                    "caption": "-"
+                },
+                {
+                    "caption": "Über &Windows",
+                    "id": 57664
+                }
+            ]
+        }
+    ]
+}

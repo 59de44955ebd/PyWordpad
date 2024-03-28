@@ -1,0 +1,139 @@
+{
+    "id": 1540,
+    "class": "DIALOGEX",
+    "rect": [
+        30,
+        73,
+        274,
+        74
+    ],
+    "style": -2134376256,
+    "exstyle": 0,
+    "caption": "Suchen",
+    "font": [
+        "MS Shell Dlg",
+        8
+    ],
+    "controls": [
+        {
+            "caption": "&Suchen nach:",
+            "id": -1,
+            "class": "STATIC",
+            "style": 1342308352,
+            "rect": [
+                4,
+                8,
+                48,
+                8
+            ]
+        },
+        {
+            "caption": "",
+            "id": 1152,
+            "class": "EDIT",
+            "style": 1350762624,
+            "rect": [
+                47,
+                7,
+                128,
+                12
+            ]
+        },
+        {
+            "caption": "Nu&r ganzes Wort suchen",
+            "id": 1040,
+            "class": "BUTTON",
+            "style": 1342373891,
+            "rect": [
+                4,
+                26,
+                92,
+                12
+            ]
+        },
+        {
+            "caption": "Groß-/Kleins&chreibung",
+            "id": 1041,
+            "class": "BUTTON",
+            "style": 1342242819,
+            "rect": [
+                4,
+                42,
+                89,
+                12
+            ]
+        },
+        {
+            "caption": "A&m Ende von vorne beginnen",
+            "id": 1042,
+            "class": "BUTTON",
+            "style": 1342242819,
+            "rect": [
+                4,
+                58,
+                108,
+                12
+            ]
+        },
+        {
+            "caption": "Suchrichtung",
+            "id": 1072,
+            "class": "BUTTON",
+            "style": 1342308359,
+            "rect": [
+                101,
+                26,
+                108,
+                28
+            ]
+        },
+        {
+            "caption": "Nach &oben",
+            "id": 1056,
+            "class": "BUTTON",
+            "style": 1342308361,
+            "rect": [
+                105,
+                38,
+                49,
+                12
+            ]
+        },
+        {
+            "caption": "Nach &unten",
+            "id": 1057,
+            "class": "BUTTON",
+            "style": 1342177289,
+            "rect": [
+                155,
+                38,
+                48,
+                12
+            ]
+        },
+        {
+            "caption": "&Weitersuchen",
+            "id": 1,
+            "class": "BUTTON",
+            "style": 1342373889,
+            "rect": [
+                219,
+                5,
+                50,
+                14
+            ]
+        },
+        {
+            "caption": "Abbrechen",
+            "id": 2,
+            "class": "BUTTON",
+            "style": 1342242816,
+            "rect": [
+                219,
+                23,
+                50,
+                14
+            ]
+        }
+    ]
+}

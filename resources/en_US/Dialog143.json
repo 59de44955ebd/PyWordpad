@@ -1,0 +1,211 @@
+{
+    "id": 143,
+    "class": "DIALOGEX",
+    "rect": [
+        0,
+        0,
+        185,
+        168
+    ],
+    "style": -1865940800,
+    "exstyle": 0,
+    "caption": "Paragraph",
+    "font": [
+        "MS Shell Dlg",
+        8
+    ],
+    "controls": [
+        {
+            "caption": "Indentation",
+            "id": 1022,
+            "class": "BUTTON",
+            "style": 1342177287,
+            "rect": [
+                7,
+                7,
+                114,
+                75
+            ]
+        },
+        {
+            "caption": "&Left:",
+            "id": -1,
+            "class": "STATIC",
+            "style": 1342308352,
+            "rect": [
+                13,
+                21,
+                29,
+                8
+            ]
+        },
+        {
+            "caption": "Left",
+            "id": 1000,
+            "class": "EDIT",
+            "style": 1350631552,
+            "rect": [
+                52,
+                19,
+                60,
+                14
+            ]
+        },
+        {
+            "caption": "&Right:",
+            "id": -1,
+            "class": "STATIC",
+            "style": 1342177280,
+            "rect": [
+                13,
+                42,
+                29,
+                8
+            ]
+        },
+        {
+            "caption": "Right",
+            "id": 1001,
+            "class": "EDIT",
+            "style": 1350631552,
+            "rect": [
+                52,
+                40,
+                60,
+                14
+            ]
+        },
+        {
+            "caption": "&First line:",
+            "id": -1,
+            "class": "STATIC",
+            "style": 1342177280,
+            "rect": [
+                13,
+                63,
+                32,
+                8
+            ]
+        },
+        {
+            "caption": "First line",
+            "id": 1002,
+            "class": "EDIT",
+            "style": 1350631552,
+            "rect": [
+                52,
+                60,
+                60,
+                14
+            ]
+        },
+      	{
+            "caption": "Spacing",
+            "id": -1,
+            "class": "BUTTON",
+            "style": 1342177287,
+            "rect": [
+                7,
+                84,
+                114,
+                54
+            ]
+        },
+        {
+            "caption": "&Above:",
+            "id": -1,
+            "class": "STATIC",
+            "style": 1342308352,
+            "rect": [
+                13,
+                98,
+                32,
+                8
+            ]
+        },
+        {
+            "caption": "",
+            "id": 1060,
+            "class": "EDIT",
+            "style": 1350631552,
+            "rect": [
+                52,
+                96,
+                60,
+                14
+            ]
+        },
+        {
+            "caption": "&Below:",
+            "id": -1,
+            "class": "STATIC",
+            "style": 1342177280,
+            "rect": [
+                13,
+                119,
+                32,
+                8
+            ]
+        },
+        {
+            "caption": "",
+            "id": 1061,
+            "class": "EDIT",
+            "style": 1350631552,
+            "rect": [
+                52,
+                117,
+                60,
+                14
+            ]
+        },
+        {
+            "caption": "&Alignment:",
+            "id": -1,
+            "class": "STATIC",
+            "style": 1342308352,
+            "rect": [
+                13,
+                147,
+                37,
+                8
+            ]
+        },
+        {
+            "caption": "Alignment",
+            "id": 111,
+            "class": "COMBOBOX",
+            "style": 1344339971,
+            "rect": [
+                52,
+                145,
+                60,
+                45
+            ]
+        },
+        {
+            "caption": "OK",
+            "id": 1,
+            "class": "BUTTON",
+            "style": 1342242817,
+            "rect": [
+                128,
+                10,
+                50,
+                14
+            ]
+        },
+        {
+            "caption": "Cancel",
+            "id": 2,
+            "class": "BUTTON",
+            "style": 1342242816,
+            "rect": [
+                128,
+                27,
+                50,
+                14
+            ]
+        }
+    ]
+}

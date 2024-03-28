@@ -1,0 +1,270 @@
+{
+    "id": 128,
+    "language": [
+        "LANG_ENGLISH",
+        "SUBLANG_ENGLISH_US"
+    ],
+    "items": [
+        {
+            "caption": "&File",
+            "items": [
+                {
+                    "caption": "&New...\tCtrl+N",
+                    "id": 57600
+                },
+                {
+                    "caption": "&Open...\tCtrl+O",
+                    "id": 57601
+                },
+                {
+                    "caption": "&Save\tCtrl+S",
+                    "id": 57603
+                },
+                {
+                    "caption": "Save &As...",
+                    "id": 57604
+                },
+                {
+                    "caption": "-"
+                },
+                {
+                    "caption": "&Print...\tCtrl+P",
+                    "id": 57607
+                },
+                {
+                    "caption": "Page Set&up...",
+                    "id": 32771
+                },
+                {
+                    "caption": "-"
+                },
+                {
+                    "type": "menu",
+                    "caption": "Recent Files",
+                    "id": 57616,
+                    "flags": "GRAYED"
+                },
+                {
+                    "caption": "-"
+                },
+                {
+                    "caption": "E&xit",
+                    "id": 57665
+                }
+            ]
+        },
+        {
+            "caption": "&Edit",
+            "items": [
+                {
+                    "caption": "&Undo\tCtrl+Z",
+                    "id": 57643
+                },
+                {
+                    "caption": "&Redo\tCtrl+Y",
+                    "id": 57644
+                },
+                {
+                    "caption": "-"
+                },
+                {
+                    "caption": "Cu&t\tCtrl+X",
+                    "id": 57635,
+                    "flags": "GRAYED"
+                },
+                {
+                    "caption": "&Copy\tCtrl+C",
+                    "id": 57634,
+                    "flags": "GRAYED"
+                },
+                {
+                    "caption": "&Paste\tCtrl+V",
+                    "id": 57637
+                },
+                {
+                    "caption": "Cle&ar\tDel",
+                    "id": 57632,
+                    "flags": "GRAYED"
+                },
+                {
+                    "caption": "Select A&ll\tCtrl+A",
+                    "id": 57642
+                },
+                {
+                    "caption": "-"
+                },
+                {
+                    "caption": "&Find...\tCtrl+F",
+                    "id": 57636,
+                    "flags": "GRAYED"
+                },
+                {
+                    "caption": "Find &Next\tF3",
+                    "id": 57640,
+                    "flags": "GRAYED"
+                },
+                {
+                    "caption": "R&eplace...\tCtrl+H",
+                    "id": 57641,
+                    "flags": "GRAYED"
+                }
+            ]
+        },
+        {
+            "caption": "&View",
+            "items": [
+                {
+                    "caption": "&Word Wrap",
+                    "id": 32
+                },
+                {
+                    "caption": "-"
+                },
+                {
+                    "caption": "&Zoom",
+                    "items": [
+                        {
+                            "caption": "Zoom &In\tAlt+Plus",
+                            "id": 34
+                        },
+                        {
+                            "caption": "Zoom &Out\tAlt+Minus",
+                            "id": 35
+                        },
+                        {
+                            "caption": "&Restore Default Zoom\tAlt+0",
+                            "id": 36
+                        }
+                    ]
+                },
+                {
+                    "caption": "-"
+                },
+                {
+                    "caption": "&Toolbar",
+                    "id": 59392
+                },
+                {
+                    "caption": "&Format Bar",
+                    "id": 59396
+                },
+                {
+                    "type": "item",
+                    "caption": "&Status Bar",
+                    "id": 59393
+                },
+                {
+                    "caption": "-"
+                },
+                {
+                    "caption": "&Dark Mode",
+                    "id": 28
+                }
+            ]
+        },
+        {
+            "caption": "&Insert",
+            "items": [
+                {
+                    "caption": "&Date and Time...",
+                    "id": 32778
+                },
+                {
+                    "caption": "&Image...",
+                    "id": 57856
+                }
+            ]
+        },
+        {
+            "caption": "F&ormat",
+            "items": [
+                {
+                    "caption": "&Font...",
+                    "id": 57696
+                },
+		        {
+		            "caption": "&Line Spacing",
+		            "id": 32779,
+				    "items": [
+				        {
+				            "caption": "1.0",
+				            "id": 59000
+				        },
+				        {
+				            "caption": "1.15",
+				            "id": 59001,
+                    		"flags": "CHECKED"
+				        },
+				        {
+				            "caption": "1.5",
+				            "id": 59002
+				        },
+				        {
+				            "caption": "2",
+				            "id": 59003
+				        }
+				    ]
+				},
+		        {
+		            "caption": "&Bullet Style",
+		            "id": 32777,
+				    "items": [
+				        {
+				            "caption": "None",
+				            "id": 58000,
+                    		"flags": "CHECKED"
+				        },
+				        {
+				            "caption": "Bullets",
+				            "id": 58001
+				        },
+				        {
+				            "caption": "Arabic Numerals",
+				            "id": 58002
+				        },
+				        {
+				            "caption": "Letters (Lower Case)",
+				            "id": 58003
+				        },
+				        {
+				            "caption": "Letters (Upper Case)",
+				            "id": 58004
+				        },
+				        {
+				            "caption": "Roman Numerals (Lower Case)",
+				            "id": 58005
+				        },
+				        {
+				            "caption": "Roman Numerals (Upper Case)",
+				            "id": 58006
+				        }
+		    		]
+		        },
+                {
+                    "caption": "&Paragraph...",
+                    "id": 32780
+                },
+                {
+                    "caption": "&Tabs...",
+                    "id": 32781
+                }
+            ]
+        },
+        {
+            "caption": "&Help",
+            "items": [
+                {
+                    "caption": "&About PyWordpad",
+                    "id": 57663
+                },
+                {
+                    "caption": "-"
+                },
+                {
+                    "caption": "About &Windows",
+                    "id": 57664
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,139 @@
+{
+    "id": 1541,
+    "class": "DIALOGEX",
+    "rect": [
+        36,
+        44,
+        230,
+        94
+    ],
+    "style": -2134376256,
+    "exstyle": 0,
+    "caption": "Replace",
+    "font": [
+        "MS Shell Dlg",
+        8
+    ],
+    "controls": [
+        {
+            "caption": "Fi&nd what:",
+            "id": -1,
+            "class": "STATIC",
+            "style": 1342308352,
+            "rect": [
+                4,
+                9,
+                48,
+                8
+            ]
+        },
+        {
+            "caption": "",
+            "id": 1152,
+            "class": "EDIT",
+            "style": 1350762624,
+            "rect": [
+                54,
+                7,
+                114,
+                12
+            ]
+        },
+        {
+            "caption": "Re&place with:",
+            "id": -1,
+            "class": "STATIC",
+            "style": 1342308352,
+            "rect": [
+                4,
+                26,
+                48,
+                8
+            ]
+        },
+        {
+            "caption": "",
+            "id": 1153,
+            "class": "EDIT",
+            "style": 1350762624,
+            "rect": [
+                54,
+                24,
+                114,
+                12
+            ]
+        },
+        {
+            "caption": "Match &whole word only",
+            "id": 1040,
+            "class": "BUTTON",
+            "style": 1342373891,
+            "rect": [
+                4,
+                46,
+                104,
+                12
+            ]
+        },
+        {
+            "caption": "Match &case",
+            "id": 1041,
+            "class": "BUTTON",
+            "style": 1342242819,
+            "rect": [
+                4,
+                62,
+                59,
+                12
+            ]
+        },
+        {
+            "caption": "&Find Next",
+            "id": 1,
+            "class": "BUTTON",
+            "style": 1342373889,
+            "rect": [
+                174,
+                4,
+                50,
+                14
+            ]
+        },
+        {
+            "caption": "&Replace",
+            "id": 1024,
+            "class": "BUTTON",
+            "style": 1342242816,
+            "rect": [
+                174,
+                21,
+                50,
+                14
+            ]
+        },
+        {
+            "caption": "Replace &All",
+            "id": 1025,
+            "class": "BUTTON",
+            "style": 1342242816,
+            "rect": [
+                174,
+                38,
+                50,
+                14
+            ]
+        },
+        {
+            "caption": "Cancel",
+            "id": 2,
+            "class": "BUTTON",
+            "style": 1342242816,
+            "rect": [
+                174,
+                55,
+                50,
+                14
+            ]
+        }
+    ]
+}

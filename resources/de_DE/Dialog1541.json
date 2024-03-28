@@ -1,0 +1,139 @@
+{
+    "id": 1541,
+    "class": "DIALOGEX",
+    "rect": [
+        36,
+        44,
+        230,
+        94
+    ],
+    "style": -2134376256,
+    "exstyle": 0,
+    "caption": "Ersetzen",
+    "font": [
+        "MS Shell Dlg",
+        8
+    ],
+    "controls": [
+        {
+            "caption": "&Suchen nach:",
+            "id": -1,
+            "class": "STATIC",
+            "style": 1342308352,
+            "rect": [
+                4,
+                9,
+                48,
+                8
+            ]
+        },
+        {
+            "caption": "",
+            "id": 1152,
+            "class": "EDIT",
+            "style": 1350762624,
+            "rect": [
+                54,
+                7,
+                114,
+                12
+            ]
+        },
+        {
+            "caption": "Ersetzen &durch:",
+            "id": -1,
+            "class": "STATIC",
+            "style": 1342308352,
+            "rect": [
+                4,
+                26,
+                51,
+                8
+            ]
+        },
+        {
+            "caption": "",
+            "id": 1153,
+            "class": "EDIT",
+            "style": 1350762624,
+            "rect": [
+                54,
+                24,
+                114,
+                12
+            ]
+        },
+        {
+            "caption": "Nu&r ganzes Wort suchen",
+            "id": 1040,
+            "class": "BUTTON",
+            "style": 1342373891,
+            "rect": [
+                4,
+                46,
+                104,
+                12
+            ]
+        },
+        {
+            "caption": "Groß-/Kleins&chreibung beachten",
+            "id": 1041,
+            "class": "BUTTON",
+            "style": 1342242819,
+            "rect": [
+                4,
+                62,
+                118,
+                12
+            ]
+        },
+        {
+            "caption": "&Weitersuchen",
+            "id": 1,
+            "class": "BUTTON",
+            "style": 1342373889,
+            "rect": [
+                174,
+                4,
+                50,
+                14
+            ]
+        },
+        {
+            "caption": "&Ersetzen",
+            "id": 1024,
+            "class": "BUTTON",
+            "style": 1342242816,
+            "rect": [
+                174,
+                21,
+                50,
+                14
+            ]
+        },
+        {
+            "caption": "A&lle ersetzen",
+            "id": 1025,
+            "class": "BUTTON",
+            "style": 1342242816,
+            "rect": [
+                174,
+                38,
+                50,
+                14
+            ]
+        },
+        {
+            "caption": "Abbrechen",
+            "id": 2,
+            "class": "BUTTON",
+            "style": 1342242816,
+            "rect": [
+                174,
+                55,
+                50,
+                14
+            ]
+        }
+    ]
+}

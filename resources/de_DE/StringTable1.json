@@ -1,6 +1,6 @@
 {
 	"ABOUT_CAPTION": "Über {}",
-	"ABOUT_TEXT": "{} v0.{}\n(c) {}\n\nEin in Python geschriebener Wordpad-Klon,\nbasierend auf nativen Win32 controls und ctypes.",
+	"ABOUT_TEXT": "{} v0.{}\n(c) {}\n\nEin in Python geschriebener Wordpad-Klon,\nbasierend auf nativen Windows controls und ctypes/libffi",
 	"FIND_FINISHED": "{} hat das Durchsuchen des Dokuments beendet.",
 	"SAVE_CHANGES": "Möchten Sie die Änderungen an {} speichern?",
 	"WARN_TXT": "Sie sind dabei, die Datei als Textdatei zu speichern. Dadurch geht die Formatierung verloren. Möchten Sie den Vorgang trotzdem fortsetzen?",

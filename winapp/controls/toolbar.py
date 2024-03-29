@@ -7,10 +7,8 @@ from winapp.wintypes_extended import DWORD_PTR, UINT_PTR, MAKELONG
 from winapp.const import WM_USER, WS_EX_COMPOSITED, WS_CHILD, WS_VISIBLE, WS_CLIPCHILDREN, IMAGE_BITMAP, LR_LOADFROMFILE, LR_LOADTRANSPARENT, LR_LOADMAP3DCOLORS
 from winapp.controls.common import *
 from winapp.window import *
-from winapp.dlls import user32 #, comctl32
-#from winapp.imagelist import *
+from winapp.dlls import user32
 from winapp.themes import *
-
 
 ########################################
 # Class Name
@@ -27,7 +25,7 @@ class TBBUTTON(Structure):
         ("fsStyle", BYTE),
         ("bReserved", BYTE * TBBUTTON_RESERVED_SIZE),
         ("dwData", DWORD_PTR),
-        ("iString", c_wchar_p)  # INT_PTR
+        ("iString", c_wchar_p)
     ]
 
 class TBADDBITMAP(Structure):

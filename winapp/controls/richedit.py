@@ -10,18 +10,7 @@ from winapp.dlls import kernel32
 
 kernel32.LoadLibraryW('Msftedit.dll')
 
-#For Microsoft Rich Edit 4.1 (Msftedit.dll), specify MSFTEDIT_CLASS as the window class.
-#For all previous versions, specify RICHEDIT_CLASS. For more information, see Versions of Rich Edit.
-
 MSFTEDIT_CLASS = "RICHEDIT50W"
-
-#// NOTE:  MSFTEDIT.DLL only registers MSFTEDIT_CLASS.  If an application wants
-#// to use the following RichEdit classes, it needs to load riched20.dll.
-#// Otherwise, CreateWindow with RICHEDIT_CLASS will fail.
-#// This also applies to any dialog that uses RICHEDIT_CLASS
-#// RichEdit 2.0 Window Class
-
-RICHEDIT_CLASSW = "RichEdit20W"
 
 # RichEdit messages
 
@@ -416,18 +405,10 @@ class RichEdit(Window):
     ########################################
     #
     ########################################
-    def destroy_window(self):
-        if self.is_dark:
-            self.parent_window.unregister_message_callback(WM_CTLCOLOREDIT, self._on_WM_CTLCOLOREDIT)
-        super().destroy_window()
-
-    ########################################
-    #
-    ########################################
     def apply_theme(self, is_dark):
         super().apply_theme(is_dark)
         uxtheme.SetWindowTheme(self.hwnd, 'DarkMode_Explorer' if is_dark else 'Explorer', None)
-        user32.SendMessageW(self.hwnd, EM_SETBKGNDCOLOR, 0, CONTROL_COLOR_DARK if is_dark else 0xffffff)
+        user32.SendMessageW(self.hwnd, EM_SETBKGNDCOLOR, 0, CONTROL_BG_COLOR_DARK if is_dark else 0xffffff)
         user32.SendMessageW(self.hwnd, EM_SETUNDOLIMIT, 0, 0)
         cf = CHARFORMATW()
         cf.dwMask = CFM_COLOR

@@ -192,8 +192,8 @@ class ComboBox(Window):
     ########################################
     def on_WM_CTLCOLORLISTBOX(self, hwnd, wparam, lparam):
         gdi32.SetTextColor(wparam, TEXT_COLOR_DARK)
-        gdi32.SetBkColor(wparam, CONTROL_COLOR_DARK)
-        gdi32.SetDCBrushColor(wparam, CONTROL_COLOR_DARK)
+        gdi32.SetBkColor(wparam, CONTROL_BG_COLOR_DARK)
+        gdi32.SetDCBrushColor(wparam, CONTROL_BG_COLOR_DARK)
         return gdi32.GetStockObject(DC_BRUSH)
 
     ########################################
@@ -201,6 +201,6 @@ class ComboBox(Window):
     ########################################
     def _on_WM_CTLCOLOREDIT(self, hwnd, wparam, lparam):
         gdi32.SetTextColor(wparam, TEXT_COLOR_DARK)
-        gdi32.SetBkColor(wparam, CONTROL_COLOR_DARK)
-        gdi32.SetDCBrushColor(wparam, CONTROL_COLOR_DARK)
+        gdi32.SetBkColor(wparam, CONTROL_BG_COLOR_DARK)
+        gdi32.SetDCBrushColor(wparam, CONTROL_BG_COLOR_DARK)
         return gdi32.GetStockObject(DC_BRUSH)

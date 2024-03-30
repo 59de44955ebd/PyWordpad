@@ -422,12 +422,13 @@ class Dialog(Window):
                                     user32.GetWindowLongPtrA(hwnd_control, GWL_EXSTYLE) & ~WS_EX_CLIENTEDGE)
                             user32.SetWindowLongPtrA(hwnd_control, GWL_STYLE,
                                     user32.GetWindowLongPtrA(hwnd_control, GWL_STYLE) | WS_BORDER)
+
                             rc = RECT()
                             user32.GetWindowRect(hwnd_control, byref(rc))
                             w, h = rc.right - rc.left, rc.bottom - rc.top
                             user32.SendMessageW(hwnd_control, EM_SETMARGINS, EC_LEFTMARGIN, 2)
                             user32.MapWindowPoints(None, user32.GetParent(hwnd_control), byref(rc), 1)
-                            user32.SetWindowPos(hwnd_control, 0, rc.left, rc.top + 2, w, h - 4, SWP_FRAMECHANGED)
+                            user32.SetWindowPos(hwnd_control, 0, rc.left, rc.top + 1, w, h - 2, SWP_FRAMECHANGED)
 
                     elif window_class == 'ComboLBox' and self.is_dark:
                         uxtheme.SetWindowTheme(hwnd_control, 'DarkMode_CFD', None)
@@ -452,18 +453,28 @@ class Dialog(Window):
                         uxtheme.SetWindowTheme(hwnd_control, 'DarkMode_Explorer' if self.is_dark else 'Explorer', None)
 
                     elif window_class == 'Edit':
+                        rc = RECT()
+                        user32.GetWindowRect(hwnd_control, byref(rc))
+                        w, h = rc.right - rc.left, rc.bottom - rc.top
+
                         if self.is_dark:
                             user32.SetWindowLongPtrA(hwnd_control, GWL_EXSTYLE,
                                     user32.GetWindowLongPtrA(hwnd_control, GWL_EXSTYLE) & ~WS_EX_CLIENTEDGE)
                             user32.SetWindowLongPtrA(hwnd_control, GWL_STYLE,
                                     user32.GetWindowLongPtrA(hwnd_control, GWL_STYLE) | WS_BORDER)
+
+                            user32.SendMessageW(hwnd_control, EM_SETMARGINS, EC_LEFTMARGIN, 2)
+                            user32.MapWindowPoints(None, user32.GetParent(hwnd_control), byref(rc), 1)
+                            user32.SetWindowPos(hwnd_control, 0, rc.left, rc.top + 1, w, h - 2, SWP_FRAMECHANGED)
                         else:
                             user32.SetWindowLongPtrA(hwnd_control, GWL_EXSTYLE,
                                     user32.GetWindowLongPtrA(hwnd_control, GWL_EXSTYLE) | WS_EX_CLIENTEDGE)
                             user32.SetWindowLongPtrA(hwnd_control, GWL_STYLE,
                                     user32.GetWindowLongPtrA(hwnd_control, GWL_STYLE) & ~WS_BORDER)
-                        user32.SetWindowPos(hwnd_control, 0, 0, 0, 0, 0,
-                                SWP_NOMOVE | SWP_NOSIZE | SWP_NOZORDER | SWP_FRAMECHANGED)
+
+                            user32.SendMessageW(hwnd_control, EM_SETMARGINS, EC_LEFTMARGIN, 0)
+                            user32.MapWindowPoints(None, user32.GetParent(hwnd_control), byref(rc), 1)
+                            user32.SetWindowPos(hwnd_control, 0, rc.left, rc.top - 1, w, h + 2, SWP_FRAMECHANGED)
 
             elif self.is_dark:
                 if msg == WM_CTLCOLORDLG or msg == WM_CTLCOLORSTATIC:
@@ -477,8 +488,8 @@ class Dialog(Window):
 
                 elif msg == WM_CTLCOLOREDIT or msg == WM_CTLCOLORLISTBOX:
                     gdi32.SetTextColor(wparam, TEXT_COLOR_DARK)
-                    gdi32.SetBkColor(wparam, CONTROL_COLOR_DARK)
-                    gdi32.SetDCBrushColor(wparam, CONTROL_COLOR_DARK)
+                    gdi32.SetBkColor(wparam, CONTROL_BG_COLOR_DARK)
+                    gdi32.SetDCBrushColor(wparam, CONTROL_BG_COLOR_DARK)
                     return gdi32.GetStockObject(DC_BRUSH)
 
             return dialog_proc_callback(hwnd, msg, wparam, lparam)

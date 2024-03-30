@@ -16,12 +16,11 @@ WM_UAHINITMENU         =0x0093	# handled by DefWindowProc
 WM_UAHMEASUREMENUITEM  =0x0094	# lParam is UAHMEASUREMENUITEM
 WM_UAHNCPAINTMENUPOPUP =0x0095	# handled by DefWindowProc
 
-# Dark colors/brushes (brushes are never deleted, but only created once)
 BG_COLOR_DARK = 0x202020
 BG_BRUSH_DARK = gdi32.CreateSolidBrush(BG_COLOR_DARK)
 BG_COLOR_DARKER = 0x171717
 
-CONTROL_COLOR_DARK = 0x333333
+CONTROL_BG_COLOR_DARK = 0x333333
 TEXT_COLOR_DARK = 0xe0e0e0
 
 MENUBAR_BG_COLOR_DARK = 0x2b2b2b
@@ -31,8 +30,8 @@ MENU_BG_BRUSH_HOT = gdi32.CreateSolidBrush(0x3e3e3e)
 BG_BRUSH_BLACK = gdi32.CreateSolidBrush(0x000000)
 
 # For testing stuff
-COLOR_YELLOW = 0x00ffff
-BRUSH_YELLOW = gdi32.CreateSolidBrush(COLOR_YELLOW)
+#COLOR_YELLOW = 0x00ffff
+#BRUSH_YELLOW = gdi32.CreateSolidBrush(COLOR_YELLOW)
 
 class PreferredAppMode():
     Default = 0

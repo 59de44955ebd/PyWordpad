@@ -512,6 +512,11 @@ class App(MainWin):
         if self._current_font[1] in self._font_sizes:
             user32.SendMessageW(self.combobox_fontsize.hwnd, CB_SETCURSEL, self._font_sizes.index(self._current_font[1]), 0)
 
+        if not self._show_toolbar:
+            user32.SendMessageW(self.rebar.hwnd, RB_SHOWBAND, 0, 0)
+        if not self._show_formatbar:
+            user32.SendMessageW(self.rebar.hwnd, RB_SHOWBAND, 1, 0)
+
         rc = self.rebar.get_window_rect()
         self.rebar_height = rc.bottom - rc.top
 
